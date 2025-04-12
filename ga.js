@@ -1,6 +1,6 @@
 // Supabase configuration
-const SUPABASE_URL = "https://oswcwwongecwktzwzppm.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9zd2N3d29uZ2Vjd2t0end6cHBtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQzOTM0MDYsImV4cCI6MjA1OTk2OTQwNn0.nkOOsjZwfTrzmWoGz8dgEYhzvPGN2SgzQlIp7nttKUI";
+const SUPABASE_URL = "https://ssirhrwayfthjdobmtds.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNzaXJocndheWZ0aGpkb2JtdGRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ0NTQ2MDgsImV4cCI6MjA2MDAzMDYwOH0.daXhhThwVKC8llHti_YzbMyUZnh26WXz2LprDrIg8n4";
 
 function sendData(data, type) {
   // Prepare headers for Supabase request
